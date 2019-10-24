@@ -1,0 +1,33 @@
+.container{
+	position: relative; /*permet de gerer la position des carrés dans le bloc*/
+	display: inline-block;
+	perspective: 500px; /*crée l'axe y pour la 3d*/
+	width: 500px;
+	height: 500px;
+	background-color: grey;
+	transform-style: preserve-3d; /*permet la cohérence 3d lors des mouvements*/
+}
+.carre{
+	position: absolute;/* détache l'élément de son container*/
+	left: 200px;
+	top:200px;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	transition: all 2s; /*gère la transition de hover*/
+}
+.carre:nth-child{1){
+	background-color: blue;
+	transform: translate3d(0,0px,50px); /*combinaison x,y,z*/
+}
+.carre:nth-child{2){
+	background-color: red;
+	transform: translate3d(0,0px,100px); /*combinaison x,y,z*/
+}
+.carre:nth-child{3){
+	background-color: orange;
+	transform: translate3d(0,0px,150px); /*combinaison x,y,z*/
+}
+.carre:hover{
+	transform: translatez(150px);
+}
